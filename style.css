@@ -1,0 +1,1683 @@
+:root {
+    --primary-color: #8BB174;
+    --primary-light: #e6f0e2;
+    --secondary-color: #f1965a;
+    /* Accent for buttons like Booking */
+    --background-color: #fdfdfb;
+    --text-color: #333d32;
+    --text-light: #667064;
+    --white: #ffffff;
+    --grey: #f4f4f4;
+    --line-color: #06C755;
+    --font-main: 'Noto Sans JP', sans-serif;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --border-radius: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding-bottom: 120px;
+    /* Increased space for larger sticky footer */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: var(--white);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.header-top {
+    padding: 10px 0;
+}
+
+.header-top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    max-width: 1400px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header-phone {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.phone-upper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--primary-color);
+}
+
+.phone-upper i {
+    font-size: 14px;
+}
+
+.phone-label {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.phone-number {
+    font-size: 32px;
+    /* Increased size */
+    font-weight: 900;
+    color: var(--primary-color);
+    line-height: 1;
+    letter-spacing: 0.02em;
+}
+
+.phone-hours {
+    font-size: 10px;
+    color: var(--text-light);
+}
+
+.header-btns-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-sns {
+    display: flex;
+    gap: 10px;
+    margin-right: 5px;
+}
+
+.sns-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--grey);
+    color: var(--text-color);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.sns-icon:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.sns-icon i {
+    font-family: 'Font Awesome 6 Brands', 'Font Awesome 5 Brands', sans-serif !important;
+}
+
+.btn-header {
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--white);
+    text-align: center;
+    min-width: 110px;
+    transition: 0.3s;
+}
+
+.btn-header:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.btn-inquiry {
+    background: #666;
+}
+
+.btn-catalog {
+    background: var(--primary-color);
+}
+
+.btn-booking {
+    background: var(--secondary-color);
+}
+
+/* About Section */
+.about-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+}
+
+.about-point {
+    margin-top: 30px;
+}
+
+.about-point h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.about-point h4 i {
+    color: var(--primary-color);
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+/* Doctor Section */
+.doctor-section {
+    padding: 100px 0;
+    background: var(--grey);
+}
+
+.doctor-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 50px;
+    box-shadow: var(--shadow);
+}
+
+.doctor-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+.doctor-content h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.doctor-profile {
+    font-size: 16px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 15px;
+}
+
+.doctor-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.clinic-info {
+    background: var(--primary-light);
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.clinic-logo-wrapper {
+    flex: 0 0 200px;
+    background: var(--white);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clinic-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.clinic-text {
+    flex: 1;
+}
+
+.clinic-info h4 {
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.clinic-text p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Reason Section */
+.reason-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.reason-representative {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 50px;
+    align-items: center;
+    background: var(--primary-light);
+    border-radius: var(--border-radius);
+    padding: 50px;
+    margin-bottom: 60px;
+}
+
+.rep-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.rep-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.rep-content h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.rep-name-en {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-light);
+    margin-left: 10px;
+}
+
+.rep-message {
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--text-color);
+    line-height: 1.4;
+    position: relative;
+    padding-left: 20px;
+}
+
+.rep-message::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.reason-research {
+    background: var(--white);
+    border: 1px solid var(--grey);
+    border-radius: var(--border-radius);
+    padding: 60px;
+    box-shadow: var(--shadow);
+}
+
+.research-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+}
+
+.research-header i {
+    font-size: 32px;
+}
+
+.research-header h3 {
+    font-size: 24px;
+}
+
+.research-intro {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.research-item {
+    background: var(--grey);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.research-item h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.research-item h4 .num {
+    font-size: 24px;
+    font-weight: 900;
+    opacity: 0.3;
+}
+
+.research-footer {
+    border-top: 1px dashed #ccc;
+    padding-top: 30px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.subtitle {
+    font-size: 20px;
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-top: -10px;
+}
+
+.main-nav {
+    background: var(--primary-color);
+    width: 100%;
+}
+
+.container-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-nav ul li {
+    flex: 1;
+}
+
+.main-nav ul li a {
+    display: block;
+    padding: 15px 10px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    transition: 0.3s;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-nav ul li:last-child a {
+    border-right: none;
+}
+
+.main-nav ul li a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Condition Section */
+.condition-section {
+    padding: 80px 0;
+    background: var(--grey);
+}
+
+.condition-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.condition-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid transparent;
+}
+
+.condition-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+}
+
+.card-icon {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.soel-card-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: contain;
+    background: white;
+    padding: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.condition-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    line-height: 1.4;
+}
+
+.service-name {
+    font-size: 26px;
+    color: var(--primary-color);
+    font-weight: 900;
+    display: block;
+    margin-top: 5px;
+}
+
+.condition-card p {
+    font-size: 15px;
+    color: var(--text-light);
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.card-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: var(--primary-light);
+    color: var(--primary-color);
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.condition-card:hover .card-btn {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+/* Hero Section */
+.hero {
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #fdfdfb 0%, #f0f7ef 100%);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.hero-badges {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #fff 0%, #f9f9f9 50%, #eee 100%);
+    border: 3px double #D4AF37;
+    /* Double gold border */
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.8);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    /* For shine effect */
+}
+
+/* Shine effect animation */
+.badge-item::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to bottom right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0) 40%,
+            rgba(255, 255, 255, 0.7) 50%,
+            rgba(255, 255, 255, 0) 60%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+.badge-item:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.5);
+    border-color: #f1c40f;
+}
+
+.badge-item i {
+    font-size: 24px;
+    color: #D4AF37;
+    margin-bottom: 3px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.badge-item span {
+    font-size: 12px;
+    font-weight: 900;
+    color: #b8860b;
+    /* Darker gold/bronze */
+    text-align: center;
+    line-height: 1.1;
+    padding: 0 5px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+}
+
+/* Flow Section */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.flow-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.flow-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.flow-item {
+    background: var(--primary-light);
+    padding: 30px 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.flow-item:not(:last-child)::after {
+    content: '▶';
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-size: 12px;
+}
+
+.flow-number {
+    font-size: 14px;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.flow-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.flow-item h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.flow-item p {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* Sticky Footer */
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    /* Transparent background */
+    backdrop-filter: blur(10px);
+    /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.05);
+    z-index: 2000;
+    padding: 15px 0;
+}
+
+.footer-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.footer-btn {
+    padding: 15px 10px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 26px;
+    /* 13px * 2 */
+    color: var(--white);
+    line-height: 1.2;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.footer-btn:hover {
+    transform: scale(1.08) translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.footer-btn i {
+    font-size: 32px;
+    margin-bottom: 6px;
+}
+
+.btn-tel {
+    background: #7ca566;
+}
+
+.btn-line {
+    background: var(--line-color);
+}
+
+.btn-booking {
+    background: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    nav {
+        display: none;
+        /* Hide nav earlier to make room for buttons and phone */
+    }
+}
+
+@media (max-width: 991px) {
+    .flow-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .flow-item:nth-child(3)::after {
+        display: none;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
+
+    .about-grid,
+    .doctor-card {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .doctor-card {
+        padding: 30px;
+    }
+
+    .doctor-image {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .condition-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .reason-representative {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .rep-image {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .rep-message {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    .rep-message::before {
+        left: 50%;
+        top: 0;
+        bottom: auto;
+        width: 40px;
+        height: 4px;
+        transform: translateX(-50%);
+    }
+
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .research-section {
+        padding: 60px 0;
+    }
+
+    .research-card {
+        padding: 30px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .flow-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .flow-item::after {
+        display: none !important;
+    }
+
+    nav,
+    .main-nav {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-badges {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .badge-item {
+        width: 80px;
+        height: 80px;
+    }
+
+    .badge-item span {
+        font-size: 10px;
+    }
+
+    .header-right {
+        gap: 10px;
+    }
+
+    .phone-number {
+        font-size: 22px;
+    }
+
+    .header-btns-group {
+        display: none;
+    }
+
+    .phone-label,
+    .phone-hours {
+        display: none;
+    }
+
+    .cta-header {
+        display: none;
+    }
+
+    .about-section,
+    .doctor-section {
+        padding: 60px 0;
+    }
+
+    .about-text h3 {
+        font-size: 26px;
+    }
+
+    .doctor-content h3 {
+        font-size: 24px;
+    }
+
+    .rep-content h3 {
+        font-size: 28px;
+    }
+
+    .rep-message {
+        font-size: 18px;
+    }
+
+    .research-header h3 {
+        font-size: 20px;
+    }
+
+    .research-item {
+        padding: 20px;
+    }
+
+    .header-sns {
+        display: none;
+    }
+
+    .footer-btn {
+        font-size: 18px;
+        padding: 10px 5px;
+    }
+
+    .footer-btn i {
+        font-size: 24px;
+    }
+
+    body {
+        padding-bottom: 151px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-btns {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .footer-btn {
+        flex-direction: row;
+        gap: 15px;
+        font-size: 22px;
+        padding: 15px;
+    }
+
+    .footer-btn i {
+        margin-bottom: 0;
+    }
+
+    body {
+        padding-bottom: 250px;
+    }
+}
+
+/* ================================================= =
+   Soel Page Styles
+================================================== */
+
+.service-tag {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.soel-hero {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8faf7 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.soel-hero::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 40%;
+    height: 120%;
+    background: var(--primary-light);
+    border-radius: 50%;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.soel-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.soel-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.soel-brand {
+    margin-bottom: 40px;
+}
+
+.soel-main-logo {
+    max-width: 250px;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+    background: white;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 15px 35px rgba(241, 150, 90, 0.2);
+    /* Subtle warm glow matching the logo */
+}
+
+.soel-hero h1 {
+    font-size: 52px;
+    line-height: 1.3;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.soel-hero p {
+    font-size: 20px;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* Soel Check Section */
+.soel-check {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.check-box {
+    background: var(--primary-light);
+    padding: 60px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.check-box h3 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.check-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.check-list li {
+    background: var(--white);
+    padding: 20px 25px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.check-list li:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.check-list li i {
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+/* Soel Pain Section */
+.soel-pain {
+    padding: 100px 0;
+    background: #fafaf8;
+}
+
+.pain-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.pain-text p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+.pain-points {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    margin: 30px 0;
+    border-left: 5px solid var(--secondary-color);
+}
+
+.pain-points span {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.pain-points span:last-child {
+    margin-bottom: 0;
+}
+
+.pain-text .highlight {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--text-color);
+    border-bottom: 3px solid var(--primary-color);
+    display: inline;
+}
+
+.pain-image img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Soel Concept Section */
+.soel-concept {
+    padding: 120px 0;
+    background: linear-gradient(to bottom, #fafaf8, #ffffff);
+    text-align: center;
+}
+
+.concept-header h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+    line-height: 1.4;
+}
+
+.concept-body {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.concept-body p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: var(--text-light);
+}
+
+/* Soel Support Section */
+.soel-support {
+    padding: 100px 0;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.support-item {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+    border: 1px solid var(--grey);
+}
+
+.support-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+}
+
+.support-item i {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    opacity: 0.8;
+}
+
+.support-item p {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.support-desc {
+    max-width: 1000px;
+    margin: 50px auto 0;
+    background: var(--primary-light);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.support-desc p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.support-desc small {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+/* Soel Service Section */
+.soel-service {
+    padding: 100px 0;
+    background: var(--grey);
+}
+
+.service-box {
+    background: var(--white);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.service-header {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 40px;
+    text-align: center;
+}
+
+.service-header-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.soel-mini-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: white;
+    padding: 10px;
+    flex-shrink: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.soel-mini-logo-center {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: white;
+    padding: 15px;
+    margin: 0 auto 30px;
+    display: block;
+    box-shadow: 0 10px 25px rgba(241, 150, 90, 0.1);
+}
+
+.service-header h2 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.service-content {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 60px;
+    padding: 60px;
+    align-items: center;
+}
+
+.service-text p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+.price-card {
+    background: var(--primary-light);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.price-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.price-main {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.price-main span {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.price-card ul {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.price-card li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.price-card li::before {
+    content: '✓';
+    color: var(--primary-color);
+    font-weight: 900;
+}
+
+/* Soel Counseling Section */
+.soel-counseling {
+    padding: 100px 0;
+}
+
+.counseling-box {
+    border: 2px solid var(--primary-light);
+    border-radius: 30px;
+    padding: 60px;
+}
+
+.counseling-header h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.counseling-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.counseling-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.price-table {
+    background: #fff;
+    border: 1px solid var(--grey);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--grey);
+}
+
+.price-row:last-of-type {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.price-row .label {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.price-row .value {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+.price-row .value span {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.note {
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+/* Soel Points Section */
+.soel-points {
+    padding: 100px 0;
+    background: #fafaf8;
+}
+
+.points-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.point-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: 0.3s;
+}
+
+.point-card:hover {
+    transform: scale(1.02);
+}
+
+.point-card i {
+    font-size: 40px;
+    color: var(--primary-color);
+    background: var(--primary-light);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.point-card p {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.points-footer {
+    text-align: center;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px dashed var(--primary-light);
+}
+
+.points-footer p {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+/* Soel Philosophy Section */
+.soel-philosophy {
+    padding: 150px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/hero_new.jpg') center/cover no-repeat fixed;
+    color: var(--white);
+    text-align: center;
+}
+
+.philosophy-content h3 {
+    font-size: 42px;
+    margin-bottom: 40px;
+}
+
+.philosophy-content p {
+    font-size: 22px;
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+.philosophy-content .highlight {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--secondary-color);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 30px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+/* Soel CTA Section */
+.soel-cta {
+    padding: 100px 0;
+}
+
+.cta-box {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 80px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(139, 177, 116, 0.4);
+}
+
+.cta-box h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.cta-box p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.btn-large {
+    padding: 25px 60px;
+    font-size: 22px;
+    background: var(--white);
+    color: var(--primary-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-large:hover {
+    background: var(--secondary-color);
+    color: var(--white);
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* Soel Responsive */
+@media (max-width: 991px) {
+    .soel-hero h1 {
+        font-size: 36px;
+    }
+
+    .pain-grid,
+    .service-content,
+    .counseling-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .support-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .points-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-content {
+        padding: 40px;
+    }
+
+    .price-card {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .soel-hero h1 {
+        font-size: 28px;
+    }
+
+    .check-box,
+    .counseling-box,
+    .cta-box {
+        padding: 40px 20px;
+    }
+
+    .philosophy-content h3 {
+        font-size: 28px;
+    }
+
+    .philosophy-content .highlight {
+        font-size: 22px;
+    }
+
+    .service-header-brand {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .soel-mini-logo {
+        width: 60px;
+        height: 60px;
+    }
+}
